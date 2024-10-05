@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y inetutils-ping wget vim curl cmake git 
     libswscale-dev locales liblzma-dev python-lzma m4 libxext-dev strace libibverbs-dev libpcre3 libpcre3-dev \
     build-essential libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev xz-utils \
     libfreetype6-dev libxslt1-dev libxml2-dev libgeos-3.5.0 libgeos-dev && apt-get install -y --allow-downgrades \
-    --allow-change-held-packages libnccl2 libnccl-dev && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata \
+    --allow-change-held-packages libnccl2 libnccl-dev ffmpeg && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata \
     && /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && dpkg-reconfigure -f noninteractive tzdata && \
     cd /usr/lib/x86_64-linux-gnu && ln -s libcudnn.so.8 libcudnn.so && \
     cd /usr/local/cuda-11.2/targets/x86_64-linux/lib  && ln -s libcublas.so.11.4.1.1043 libcublas.so && \
