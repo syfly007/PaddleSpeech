@@ -65,7 +65,7 @@ RUN mkdir -p ~/.pip && echo "[global]" > ~/.pip/pip.conf && \
     pip install paddlepaddle-gpu==2.4.0rc0.post112 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html && \
     rm -rf ~/.cache/pip
 
-RUN git clone https://github.com/PaddlePaddle/PaddleSpeech.git && cd PaddleSpeech && \
+RUN git clone https://github.com/syfly007/PaddleSpeech.git && cd PaddleSpeech && \
     pip3 install pytest-runner paddleaudio -i https://pypi.tuna.tsinghua.edu.cn/simple && \
     pip3 install -e .[develop] -i https://pypi.tuna.tsinghua.edu.cn/simple && \
     pip3 install importlib-metadata==4.2.0 urllib3==1.25.10 -i https://pypi.tuna.tsinghua.edu.cn/simple && \
